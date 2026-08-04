@@ -39,8 +39,9 @@
 
     <nav class="nav" id="nav">
       <a href="#inicio">Inicio</a>
-      <a href="#horario">Horario</a>
       <a href="#carta">Carta</a>
+      <a href="#galeria">Galería</a>
+      <a href="#horario">Horario</a>
       <a href="#reservas">Reservas</a>
       <a href="#ubicacion">Ubicación</a>
       <a href="#contacto">Contacto</a>
@@ -74,10 +75,17 @@
         </a>
       </div>
       <ul class="hero__badges">
-        <li><strong>4,2★</strong> valoración de clientes</li>
+        <li>
+          <a href="https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+Roma+Sanxenxo" target="_blank" rel="noopener">
+            <strong>4,2★</strong> (254 opiniones en Google) ↗
+          </a>
+        </li>
         <li>Horno de piedra tradicional</li>
         <li>A 2 min de la Playa de Silgar</li>
       </ul>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span></span>
     </div>
   </section>
 
@@ -102,9 +110,55 @@
     </div>
   </section>
 
+  <section class="section about" id="sobre-nosotros">
+    <div class="container section__grid">
+      <div class="about__art" data-reveal>
+        <svg viewBox="0 0 400 400" role="img" aria-label="Ilustración de una pizza artesana recién horneada">
+          <circle cx="200" cy="200" r="180" fill="#f3ead9"/>
+          <circle cx="200" cy="200" r="150" fill="#e7c98f"/>
+          <circle cx="200" cy="200" r="136" fill="#c9974c"/>
+          <circle cx="200" cy="200" r="122" fill="#d94f2b"/>
+          <circle cx="200" cy="200" r="112" fill="#e8ecae"/>
+          <g fill="#b3391d">
+            <circle cx="160" cy="160" r="16"/>
+            <circle cx="245" cy="150" r="13"/>
+            <circle cx="255" cy="230" r="15"/>
+            <circle cx="175" cy="250" r="12"/>
+            <circle cx="215" cy="205" r="10"/>
+            <circle cx="140" cy="210" r="9"/>
+          </g>
+          <g fill="#204b34">
+            <circle cx="190" cy="175" r="5"/>
+            <circle cx="225" cy="190" r="4.5"/>
+            <circle cx="205" cy="235" r="5"/>
+            <circle cx="150" cy="180" r="4"/>
+            <circle cx="235" cy="235" r="4"/>
+            <circle cx="165" cy="225" r="4.5"/>
+          </g>
+        </svg>
+      </div>
+      <div class="section__text" data-reveal>
+        <p class="eyebrow">Sobre nosotros</p>
+        <h2>Tradición italiana con vistas a las Rías Baixas</h2>
+        <p>
+          En Pizzería Roma elaboramos cada pizza de forma artesana: masa de fermentación
+          lenta, horno de piedra e ingredientes de calidad. Combinamos las recetas
+          italianas de siempre con el ambiente relajado de Sanxenxo, a un paso de la
+          Playa de Silgar, para que cada visita sea una pequeña escapada al
+          Mediterráneo sin salir de Galicia.
+        </p>
+        <ul class="check-list">
+          <li>Masa de fermentación lenta y horno de piedra</li>
+          <li>Más de 25 pizzas y una carta italiana completa</li>
+          <li>Terraza y ambiente informal junto al mar</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="horario">
     <div class="container section__grid">
-      <div class="section__text">
+      <div class="section__text" data-reveal>
         <p class="eyebrow">Horario</p>
         <h2>Te esperamos todos los días de la semana</h2>
         <p>
@@ -118,7 +172,7 @@
         <a href="tel:+34986164639" class="btn btn--primary">Llamar ahora</a>
       </div>
 
-      <div class="hours-card">
+      <div class="hours-card" data-reveal>
         <ul class="hours-list">
           <li><span>Lunes</span><span>12:00–16:00 · 20:00–24:00</span></li>
           <li class="is-today"><span>Martes</span><span>20:00–24:00</span></li>
@@ -134,63 +188,227 @@
 
   <section class="section section--alt" id="carta">
     <div class="container">
-      <div class="section__head section__head--center">
+      <div class="section__head section__head--center" data-reveal>
         <p class="eyebrow">La Carta</p>
         <h2>Nuestra selección italiana</h2>
         <p class="section__head-lead">
-          Estamos preparando la carta completa de Pizzería Roma. Muy pronto podrás
-          consultar aquí todas nuestras pizzas, pastas, entrantes y postres.
+          Pizzas al horno de piedra, pastas, entrantes, ensaladas y postres. Toca una
+          categoría para ver los platos y precios.
         </p>
       </div>
 
-      <div class="menu-grid">
-        <div class="menu-card">
-          <div class="menu-card__icon">
-            <svg viewBox="0 0 24 24" width="30" height="30"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="9" cy="9" r="1.4" fill="currentColor"/><circle cx="14" cy="8" r="1.1" fill="currentColor"/><circle cx="15" cy="13" r="1.3" fill="currentColor"/><circle cx="10" cy="14" r="1" fill="currentColor"/></svg>
-          </div>
-          <h3>Pizzas</h3>
-          <p>Masa de fermentación lenta y horno de piedra. Próximamente</p>
+      <div class="tabs" data-reveal>
+        <div class="tabs__nav" id="menuTabs" role="tablist">
+          <button class="tabs__btn is-active" role="tab" aria-selected="true" data-tab="pizzas">Pizzas</button>
+          <button class="tabs__btn" role="tab" aria-selected="false" data-tab="calzones">Calzones &amp; Fugazzeta</button>
+          <button class="tabs__btn" role="tab" aria-selected="false" data-tab="entrantes">Entrantes &amp; Tostas</button>
+          <button class="tabs__btn" role="tab" aria-selected="false" data-tab="ensaladas">Ensaladas</button>
+          <button class="tabs__btn" role="tab" aria-selected="false" data-tab="pastas">Pastas</button>
+          <button class="tabs__btn" role="tab" aria-selected="false" data-tab="postres">Postres</button>
         </div>
-        <div class="menu-card">
-          <div class="menu-card__icon">
-            <svg viewBox="0 0 24 24" width="30" height="30"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M4 4c6 2 10 6 12 12M4 16c6-2 10-6 12-12"/></svg>
+
+        <div class="tabs__panel is-active" id="tab-pizzas" role="tabpanel">
+          <p class="tabs__note">Precio mediana / grande</p>
+          <div class="menu-list menu-list--cols">
+            <div class="menu-item"><div class="menu-item__head"><h4>1. Margarita</h4><span class="menu-item__price">11,50 / 14,50 €</span></div><p>Salsa de tomate, mozzarella, aceitunas y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>2. Especial</h4><span class="menu-item__price">13,80 / 16,80 €</span></div><p>Salsa de tomate, mozzarella, jamón, pimiento, orégano y aceitunas</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>3. Napolitana</h4><span class="menu-item__price">13,80 / 16,80 €</span></div><p>Salsa de tomate, mozzarella, tomate en rodajas, albahaca fresca y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>4. Napolitana especial</h4><span class="menu-item__price">15,10 / 18,10 €</span></div><p>Salsa de tomate, mozzarella, jamón, tomate natural, ajo al óleo y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>5. Champiñones</h4><span class="menu-item__price">15,30 / 18,20 €</span></div><p>Salsa de tomate, mozzarella, jamón, champiñones, pimientos y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>6. Fugazza</h4><span class="menu-item__price">12,80 / 15,80 €</span></div><p>Cebolla desflemada, queso gratinado y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>7. Fugazza especial</h4><span class="menu-item__price">14,10 / 17,10 €</span></div><p>Mozzarella, jamón, cebolla desflemada, queso gratinado, orégano y aceitunas</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>8. Atún</h4><span class="menu-item__price">15,10 / 18,10 €</span></div><p>Salsa de tomate, mozzarella, atún y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>9. Marinera</h4><span class="menu-item__price">17,20 / 19,80 €</span></div><p>Salsa de tomate, mozzarella, gambas, queso gratinado, aceitunas negras y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>10. Salmón</h4><span class="menu-item__price">17,20 / 19,80 €</span></div><p>Salsa de tomate, mozzarella, salmón ahumado, alcaparras y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>11. Boloñesa</h4><span class="menu-item__price">16,80 / 19,10 €</span></div><p>Salsa de tomate, mozzarella, boloñesa, queso gratinado, orégano y aceitunas</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>12. Chorizo</h4><span class="menu-item__price">14,60 / 17,60 €</span></div><p>Salsa de tomate, mozzarella, chorizo, orégano y aceitunas</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>13. Espinacas</h4><span class="menu-item__price">13,70 / 16,70 €</span></div><p>Salsa de tomate, mozzarella, espinacas, bechamel, queso gratinado y aceitunas negras</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>14. Anchoa</h4><span class="menu-item__price">14,90 / 17,90 €</span></div><p>Salsa de tomate, mozzarella, anchoa, pimientos y aceitunas negras</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>15. Cuatro quesos</h4><span class="menu-item__price">16,80 / 19,60 €</span></div><p>Salsa de tomate, mozzarella, queso de cabra, queso azul y queso gratinado</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>16. Dolce vita</h4><span class="menu-item__price">14,70 / 17,70 €</span></div><p>Mozzarella, queso de cabra, miel y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>17. Hawaiana</h4><span class="menu-item__price">15,20 / 18,20 €</span></div><p>Salsa de tomate, mozzarella, jamón y piña</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>18. Pollo</h4><span class="menu-item__price">16,10 / 18,80 €</span></div><p>Salsa de tomate, mozzarella, pollo y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>19. Pollo y espinacas</h4><span class="menu-item__price">16,50 / 19,30 €</span></div><p>Salsa de tomate, mozzarella, pollo, espinacas, bechamel, queso gratinado y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>20. Roma 76</h4><span class="menu-item__price">17,10 / 19,80 €</span></div><p>Salsa de tomate, mozzarella, jamón serrano, tomate cherry, rúcula y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>21. Bacon</h4><span class="menu-item__price">15,30 / 18,30 €</span></div><p>Salsa de tomate, mozzarella, bacon y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>22. Alemana</h4><span class="menu-item__price">17,20 / 19,40 €</span></div><p>Salsa de tomate, mozzarella, bacon, salchicha, huevo cocido, salsa rosa y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>23. Gambas al ajillo</h4><span class="menu-item__price">16,50 / 19,30 €</span></div><p>Salsa de tomate, mozzarella, gambas, ajo al óleo, queso gratinado, orégano y aceitunas</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>24. Barbacoa</h4><span class="menu-item__price">17,50 / 19,50 €</span></div><p>Salsa de tomate, mozzarella, carne picada, pollo, bacon, salsa barbacoa y orégano</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>25. Carbonara</h4><span class="menu-item__price">15,80 / 18,80 €</span></div><p>Mozzarella, salsa carbonara, champiñones y queso gratinado</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>26. Tex-Mex</h4><span class="menu-item__price">17,60 / 19,80 €</span></div><p>Salsa de tomate, mozzarella, mezcla de quesos, tomate natural, pollo, carne picada, pimiento, queso gratinado y salsa Tex-Mex</p></div>
           </div>
-          <h3>Pastas</h3>
-          <p>Recetas tradicionales italianas. Próximamente</p>
         </div>
-        <div class="menu-card">
-          <div class="menu-card__icon">
-            <svg viewBox="0 0 24 24" width="30" height="30"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M5 3v18M19 3v6a3 3 0 0 1-6 0V3M16 3v9"/></svg>
+
+        <div class="tabs__panel" id="tab-calzones" role="tabpanel">
+          <h3 class="tabs__group-title">Calzones</h3>
+          <div class="menu-list menu-list--cols">
+            <div class="menu-item"><div class="menu-item__head"><h4>Especial</h4><span class="menu-item__price">15,90 €</span></div></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Napolitana especial</h4><span class="menu-item__price">17,10 €</span></div></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Roma 76</h4><span class="menu-item__price">19,30 €</span></div></div>
           </div>
-          <h3>Entrantes</h3>
-          <p>Para compartir antes del plato principal. Próximamente</p>
+          <h3 class="tabs__group-title">Fugazzeta</h3>
+          <div class="menu-list menu-list--cols">
+            <div class="menu-item"><div class="menu-item__head"><h4>Fugazzeta</h4><span class="menu-item__price">18,80 €</span></div><p>Mozzarella, jamón, cebolla y orégano (entre dos tapas de pizza)</p></div>
+          </div>
         </div>
-        <div class="menu-card">
-          <div class="menu-card__icon">
-            <svg viewBox="0 0 24 24" width="30" height="30"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 21s-7-4.5-9-9.5C1.5 7 4 4 7.5 4 10 4 12 6 12 6s2-2 4.5-2C20 4 22.5 7 21 11.5 19 16 12 21 12 21z"/></svg>
+
+        <div class="tabs__panel" id="tab-entrantes" role="tabpanel">
+          <h3 class="tabs__group-title">Entrantes</h3>
+          <div class="menu-list menu-list--cols">
+            <div class="menu-item"><div class="menu-item__head"><h4>Empanadillas</h4><span class="menu-item__price">2,50 € ud. / 25,00 € x12</span></div><p>De jamón y queso, de carne, de pollo y de mozzarella con cebolla</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Patatas bravas o alioli</h4><span class="menu-item__price">6,80 €</span></div></div>
           </div>
-          <h3>Postres</h3>
-          <p>El toque dulce que cierra la experiencia. Próximamente</p>
+          <h3 class="tabs__group-title">Tostas</h3>
+          <div class="menu-list menu-list--cols">
+            <div class="menu-item"><div class="menu-item__head"><h4>Pulpo</h4><span class="menu-item__price">13,50 €</span></div><p>Queso tetilla, pulpo, rúcula, aceite de oliva virgen y pimentón</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Salmón</h4><span class="menu-item__price">12,50 €</span></div><p>Salmón ahumado, queso Philadelphia y eneldo</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Jamón serrano</h4><span class="menu-item__price">10,50 €</span></div><p>Jamón serrano, pan untado con tomate y aceite de oliva</p></div>
+          </div>
         </div>
-        <div class="menu-card">
-          <div class="menu-card__icon">
-            <svg viewBox="0 0 24 24" width="30" height="30"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M7 3h10l-1 6a4 4 0 0 1-8 0L7 3zM12 13v8M8 21h8"/></svg>
+
+        <div class="tabs__panel" id="tab-ensaladas" role="tabpanel">
+          <div class="menu-list menu-list--cols">
+            <div class="menu-item"><div class="menu-item__head"><h4>Clásica</h4><span class="menu-item__price">7,10 €</span></div><p>Lechuga, tomate y cebolla</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Templada</h4><span class="menu-item__price">11,00 €</span></div><p>Lechuga variada, cebolleta y gulas</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Roma 76</h4><span class="menu-item__price">11,50 €</span></div><p>Selección de lechugas, maíz, piña, tomate cherry, cangrejo y salsa cóctel</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Campesina</h4><span class="menu-item__price">12,50 €</span></div><p>Lechuga variada, pimiento piquillo, ventresca de atún, huevo cocido, cebolleta y aceite balsámico</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>César</h4><span class="menu-item__price">12,20 €</span></div><p>Pollo, lechuga, salsa César, tomate, cebolleta, parmesano y picatostes</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Caprese</h4><span class="menu-item__price">11,80 €</span></div><p>Tomate, mozzarella y albahaca fresca</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Ensalada de pasta</h4><span class="menu-item__price">12,30 €</span></div><p>Pajaritas, atún, huevo, palitos de cangrejo, jamón y maíz</p></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Ensaladilla rusa</h4><span class="menu-item__price">8,80 €</span></div></div>
           </div>
-          <h3>Vinos y bebidas</h3>
-          <p>Selección para acompañar cada plato. Próximamente</p>
+        </div>
+
+        <div class="tabs__panel" id="tab-pastas" role="tabpanel">
+          <div class="menu-list menu-list--cols">
+            <div class="menu-item"><div class="menu-item__head"><h4>Espagueti boloñesa</h4><span class="menu-item__price">15,00 €</span></div></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Espagueti carbonara</h4><span class="menu-item__price">15,00 €</span></div></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Lasaña de carne</h4><span class="menu-item__price">16,00 €</span></div></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Lasaña de verdura</h4><span class="menu-item__price">16,00 €</span></div></div>
+          </div>
+        </div>
+
+        <div class="tabs__panel" id="tab-postres" role="tabpanel">
+          <div class="menu-list menu-list--cols">
+            <div class="menu-item"><div class="menu-item__head"><h4>Muerte por chocolate</h4><span class="menu-item__price">Consultar precio</span></div></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Tiramisú</h4><span class="menu-item__price">Consultar precio</span></div></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Tarta de la abuela</h4><span class="menu-item__price">Consultar precio</span></div></div>
+            <div class="menu-item"><div class="menu-item__head"><h4>Tarta de queso suave con membrillo</h4><span class="menu-item__price">Consultar precio</span></div></div>
+          </div>
         </div>
       </div>
 
       <p class="menu-footnote">
-        ¿Quieres saber qué tenemos disponible hoy? Llámanos al
-        <a href="tel:+34986164639">986 16 46 39</a>, estaremos encantados de contarte.
+        Carta sujeta a disponibilidad y cambios de temporada. ¿Dudas sobre algún plato
+        o alergias? Llámanos al <a href="tel:+34986164639">986 16 46 39</a>.
       </p>
     </div>
   </section>
 
+  <section class="section gallery-section" id="galeria">
+    <div class="container">
+      <div class="section__head section__head--center" data-reveal>
+        <p class="eyebrow">Galería</p>
+        <h2>El ambiente de Pizzería Roma</h2>
+        <p class="section__head-lead">
+          Toca cualquier imagen para verla en grande. Muy pronto sustituiremos estas
+          ilustraciones por fotos reales del local.
+        </p>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid" data-reveal>
+        <button type="button" class="gallery-card" data-caption="Pizza artesana recién horneada">
+          <svg viewBox="0 0 300 300" role="img" aria-label="Pizza artesana recién horneada">
+            <circle cx="150" cy="150" r="140" fill="#f3ead9"/>
+            <circle cx="150" cy="150" r="118" fill="#e7c98f"/>
+            <circle cx="150" cy="150" r="106" fill="#c9974c"/>
+            <circle cx="150" cy="150" r="96" fill="#d94f2b"/>
+            <circle cx="150" cy="150" r="88" fill="#e8ecae"/>
+            <g fill="#b3391d"><circle cx="120" cy="120" r="12"/><circle cx="185" cy="112" r="10"/><circle cx="195" cy="175" r="11"/><circle cx="130" cy="190" r="9"/><circle cx="165" cy="155" r="8"/></g>
+            <g fill="#204b34"><circle cx="145" cy="132" r="4"/><circle cx="170" cy="145" r="3.5"/><circle cx="155" cy="178" r="4"/><circle cx="115" cy="160" r="3"/></g>
+          </svg>
+          <span class="gallery-card__label">Pizza artesana</span>
+        </button>
+
+        <button type="button" class="gallery-card" data-caption="Horno de piedra tradicional">
+          <svg viewBox="0 0 300 300" role="img" aria-label="Horno de piedra tradicional">
+            <rect width="300" height="300" fill="#2a2118"/>
+            <path d="M40 260 V150 A110 110 0 0 1 260 150 V260 Z" fill="#4a2a1a"/>
+            <path d="M75 260 V160 A75 75 0 0 1 225 160 V260 Z" fill="#1a1108"/>
+            <path d="M95 260 V168 A55 55 0 0 1 205 168 V260 Z" fill="#d94f2b" opacity="0.85"/>
+            <circle cx="150" cy="210" r="26" fill="#f3ead9" opacity="0.9"/>
+            <path d="M20 260 H280 V280 H20 Z" fill="#c9974c"/>
+          </svg>
+          <span class="gallery-card__label">Horno de piedra</span>
+        </button>
+
+        <button type="button" class="gallery-card" data-caption="Terraza con vistas al mar">
+          <svg viewBox="0 0 300 300" role="img" aria-label="Terraza con vistas al mar">
+            <rect width="300" height="300" fill="#eaf3f4"/>
+            <circle cx="230" cy="70" r="34" fill="#c9974c"/>
+            <path d="M0 190 Q40 170 80 190 T160 190 T240 190 T300 190 V300 H0 Z" fill="#1c5b73"/>
+            <path d="M0 220 Q40 200 80 220 T160 220 T240 220 T300 220 V300 H0 Z" fill="#164a5e"/>
+            <rect x="120" y="150" width="8" height="70" fill="#5b5145"/>
+            <path d="M60 150 A70 40 0 0 1 200 150 Z" fill="#b3391d"/>
+          </svg>
+          <span class="gallery-card__label">Terraza frente al mar</span>
+        </button>
+
+        <button type="button" class="gallery-card" data-caption="Ingredientes frescos de temporada">
+          <svg viewBox="0 0 300 300" role="img" aria-label="Ingredientes frescos de temporada">
+            <rect width="300" height="300" fill="#f3ead9"/>
+            <circle cx="110" cy="150" r="55" fill="#d94f2b"/>
+            <path d="M110 95 q10 -20 30 -18 q-8 15 -22 20 Z" fill="#204b34"/>
+            <circle cx="205" cy="120" r="34" fill="#e8ecae"/>
+            <circle cx="205" cy="120" r="34" fill="none" stroke="#c9974c" stroke-width="3"/>
+            <path d="M150 220 l50 -30 l50 30 l-15 40 h-70 Z" fill="#e7c98f"/>
+          </svg>
+          <span class="gallery-card__label">Ingredientes frescos</span>
+        </button>
+
+        <button type="button" class="gallery-card" data-caption="Playa de Silgar, a pocos metros">
+          <svg viewBox="0 0 300 300" role="img" aria-label="Playa de Silgar, a pocos metros">
+            <rect width="300" height="300" fill="#bfe3e8"/>
+            <circle cx="240" cy="60" r="28" fill="#f3d27a"/>
+            <path d="M0 190 Q75 160 150 190 T300 190 V300 H0 Z" fill="#1c5b73"/>
+            <path d="M0 230 Q75 210 150 230 T300 230 V300 H0 Z" fill="#e7c98f"/>
+            <rect x="70" y="150" width="6" height="60" fill="#b3391d"/>
+            <path d="M40 150 A40 26 0 0 1 110 150 Z" fill="#b3391d"/>
+          </svg>
+          <span class="gallery-card__label">Playa de Silgar</span>
+        </button>
+
+        <button type="button" class="gallery-card" data-caption="Noches de verano en Sanxenxo">
+          <svg viewBox="0 0 300 300" role="img" aria-label="Noches de verano en Sanxenxo">
+            <rect width="300" height="300" fill="#1c2b3a"/>
+            <circle cx="230" cy="70" r="26" fill="#f3ead9"/>
+            <g fill="#c9974c">
+              <circle cx="40" cy="60" r="3"/><circle cx="90" cy="40" r="2.5"/><circle cx="140" cy="80" r="2"/>
+              <circle cx="180" cy="45" r="2.5"/><circle cx="60" cy="110" r="2"/>
+            </g>
+            <path d="M0 220 L60 160 L120 210 L180 150 L240 200 L300 170 V300 H0 Z" fill="#0f1a24"/>
+            <path d="M0 260 Q75 240 150 260 T300 260 V300 H0 Z" fill="#16323f"/>
+          </svg>
+          <span class="gallery-card__label">Noches de verano</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox__backdrop" data-close></div>
+    <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+      <button type="button" class="lightbox__close" data-close aria-label="Cerrar">&times;</button>
+      <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Anterior">&#8249;</button>
+      <div class="lightbox__figure" id="lightboxFigure"></div>
+      <button type="button" class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Siguiente">&#8250;</button>
+      <p class="lightbox__caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
   <section class="section" id="reservas">
     <div class="container section__grid section__grid--reverse">
-      <div class="reserve-card">
+      <div class="reserve-card" data-reveal>
         <form id="reserveForm" class="reserve-form" novalidate>
           <div class="form-row">
             <label for="nombre">Nombre y apellidos</label>
@@ -246,7 +464,7 @@
         </form>
       </div>
 
-      <div class="section__text">
+      <div class="section__text" data-reveal>
         <p class="eyebrow">Reservas</p>
         <h2>Guarda tu mesa con vistas al mar</h2>
         <p>
@@ -265,7 +483,7 @@
 
   <section class="section section--alt" id="ubicacion">
     <div class="container section__grid">
-      <div class="section__text">
+      <div class="section__text" data-reveal>
         <p class="eyebrow">Ubicación</p>
         <h2>A un paso de la Playa de Silgar</h2>
         <p>
@@ -286,7 +504,7 @@
         </a>
       </div>
 
-      <div class="map-frame">
+      <div class="map-frame" data-reveal>
         <iframe
           title="Mapa Pizzería Roma, Sanxenxo"
           src="https://www.google.com/maps?q=Ru%C3%BAa+Fuensanta+Rodr%C3%ADguez+1,+36960+Sanxenxo,+Pontevedra&output=embed"
@@ -317,6 +535,14 @@
   </section>
 
 </main>
+
+<a href="https://wa.me/34986164639" target="_blank" rel="noopener" class="float-whatsapp" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32" width="26" height="26"><path fill="#fff" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1c1.9 1 4.1 1.6 6.3 1.6 7 0 12.7-5.7 12.7-12.7C28.7 8.7 23 3 16 3zm0 23.1c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.3 1.3-3.9-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.4 9.9 10.2 5.1 16 5.1S26.6 9.9 26.6 15.7 21.8 26.1 16 26.1zm5.8-7.8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.6 8.6 0 0 1-2.5-1.6 9.5 9.5 0 0 1-1.7-2.2c-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2.1-.4 0-.5s-.7-1.7-1-2.3-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4a2.9 2.9 0 0 0-1 2.2c0 1.3.9 2.6 1.1 2.8s1.7 2.8 4.3 3.9c2.5 1.1 2.5.7 3 .7s1.9-.8 2.1-1.5.2-1.4.2-1.5-.2-.2-.4-.3z"/></svg>
+</a>
+
+<button type="button" class="float-top" id="backToTop" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+</button>
 
 <footer class="site-footer">
   <div class="container site-footer__inner">
