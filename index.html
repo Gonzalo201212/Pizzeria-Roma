@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizzería Roma | Cocina italiana frente a la Playa de Silgar, Sanxenxo</title>
+<meta name="description" content="Pizzería Roma, en Sanxenxo, junto a la Playa de Silgar. Auténtica pizza italiana horneada en horno de piedra. Consulta horarios, reserva tu mesa y llámanos.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <a href="tel:+34986164639" class="topbar__item">
+      <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+      <span>986 16 46 39</span>
+    </a>
+    <span class="topbar__item topbar__item--location">
+      <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 11.5 7.3 11.7.2.2.5.3.7.3s.5-.1.7-.3C13 21.5 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 11c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/></svg>
+      <span>Rúa Fuensanta Rodríguez, 1 · Playa de Silgar, Sanxenxo</span>
+    </span>
+    <a href="#reservas" class="topbar__item topbar__cta">Reservar mesa</a>
+  </div>
+</div>
+
+<header class="site-header" id="top">
+  <div class="container site-header__inner">
+    <a href="#top" class="brand">
+      <span class="brand__badge">PR</span>
+      <span class="brand__text">
+        <strong>Pizzería Roma</strong>
+        <small>Sanxenxo · Playa de Silgar</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#horario">Horario</a>
+      <a href="#carta">Carta</a>
+      <a href="#reservas">Reservas</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a href="#reservas" class="btn btn--primary nav__cta">Reservar</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="inicio">
+    <div class="hero__waves" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="hero__eyebrow">Ristorante &amp; Pizzeria</p>
+      <h1>Sabor italiano<br>a un paso del mar</h1>
+      <p class="hero__lead">
+        En Pizzería Roma horneamos pizza artesana al modo tradicional, a pocos metros
+        de la Playa de Silgar, en el corazón de Sanxenxo. Ven a disfrutar de la mejor
+        cocina italiana con vistas y ambiente de costa gallega.
+      </p>
+      <div class="hero__actions">
+        <a href="#reservas" class="btn btn--primary">Reservar mesa</a>
+        <a href="tel:+34986164639" class="btn btn--ghost">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+          986 16 46 39
+        </a>
+      </div>
+      <ul class="hero__badges">
+        <li><strong>4,2★</strong> valoración de clientes</li>
+        <li>Horno de piedra tradicional</li>
+        <li>A 2 min de la Playa de Silgar</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="strip">
+    <div class="container strip__inner">
+      <div class="strip__item">
+        <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <span>Ingredientes seleccionados</span>
+      </div>
+      <div class="strip__item">
+        <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm1 10.6 4 2.4-.8 1.3-4.7-2.8V7h1.5v5.6z"/></svg>
+        <span>Abierto todos los días</span>
+      </div>
+      <div class="strip__item">
+        <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 11.5 7.3 11.7.2.2.5.3.7.3s.5-.1.7-.3C13 21.5 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 11c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/></svg>
+        <span>Frente a la Playa de Silgar</span>
+      </div>
+      <div class="strip__item">
+        <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M4 4h16v2H4V4zm2 4h12l-1 12H7L6 8zm3 2v8h2v-8H9zm4 0v8h2v-8h-2z"/></svg>
+        <span>Reserva online o por teléfono</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="horario">
+    <div class="container section__grid">
+      <div class="section__text">
+        <p class="eyebrow">Horario</p>
+        <h2>Te esperamos todos los días de la semana</h2>
+        <p>
+          Comidas y cenas, de martes a domingo, y cenas los lunes. Consulta nuestro
+          horario antes de acercarte o simplemente llámanos para confirmar mesa.
+        </p>
+        <div class="hours-note">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm1 10.6 4 2.4-.8 1.3-4.7-2.8V7h1.5v5.6z"/></svg>
+          <span>Los martes solo abrimos por la noche (20:00–24:00)</span>
+        </div>
+        <a href="tel:+34986164639" class="btn btn--primary">Llamar ahora</a>
+      </div>
+
+      <div class="hours-card">
+        <ul class="hours-list">
+          <li><span>Lunes</span><span>12:00–16:00 · 20:00–24:00</span></li>
+          <li class="is-today"><span>Martes</span><span>20:00–24:00</span></li>
+          <li><span>Miércoles</span><span>12:00–16:00 · 20:00–24:00</span></li>
+          <li><span>Jueves</span><span>12:00–16:00 · 20:00–24:00</span></li>
+          <li><span>Viernes</span><span>12:00–16:00 · 20:00–24:00</span></li>
+          <li><span>Sábado</span><span>12:00–16:00 · 20:00–24:00</span></li>
+          <li><span>Domingo</span><span>12:00–16:00 · 20:00–24:00</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="carta">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <p class="eyebrow">La Carta</p>
+        <h2>Nuestra selección italiana</h2>
+        <p class="section__head-lead">
+          Estamos preparando la carta completa de Pizzería Roma. Muy pronto podrás
+          consultar aquí todas nuestras pizzas, pastas, entrantes y postres.
+        </p>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="menu-card__icon">
+            <svg viewBox="0 0 24 24" width="30" height="30"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="9" cy="9" r="1.4" fill="currentColor"/><circle cx="14" cy="8" r="1.1" fill="currentColor"/><circle cx="15" cy="13" r="1.3" fill="currentColor"/><circle cx="10" cy="14" r="1" fill="currentColor"/></svg>
+          </div>
+          <h3>Pizzas</h3>
+          <p>Masa de fermentación lenta y horno de piedra. Próximamente</p>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card__icon">
+            <svg viewBox="0 0 24 24" width="30" height="30"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M4 4c6 2 10 6 12 12M4 16c6-2 10-6 12-12"/></svg>
+          </div>
+          <h3>Pastas</h3>
+          <p>Recetas tradicionales italianas. Próximamente</p>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card__icon">
+            <svg viewBox="0 0 24 24" width="30" height="30"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M5 3v18M19 3v6a3 3 0 0 1-6 0V3M16 3v9"/></svg>
+          </div>
+          <h3>Entrantes</h3>
+          <p>Para compartir antes del plato principal. Próximamente</p>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card__icon">
+            <svg viewBox="0 0 24 24" width="30" height="30"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 21s-7-4.5-9-9.5C1.5 7 4 4 7.5 4 10 4 12 6 12 6s2-2 4.5-2C20 4 22.5 7 21 11.5 19 16 12 21 12 21z"/></svg>
+          </div>
+          <h3>Postres</h3>
+          <p>El toque dulce que cierra la experiencia. Próximamente</p>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card__icon">
+            <svg viewBox="0 0 24 24" width="30" height="30"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M7 3h10l-1 6a4 4 0 0 1-8 0L7 3zM12 13v8M8 21h8"/></svg>
+          </div>
+          <h3>Vinos y bebidas</h3>
+          <p>Selección para acompañar cada plato. Próximamente</p>
+        </div>
+      </div>
+
+      <p class="menu-footnote">
+        ¿Quieres saber qué tenemos disponible hoy? Llámanos al
+        <a href="tel:+34986164639">986 16 46 39</a>, estaremos encantados de contarte.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="reservas">
+    <div class="container section__grid section__grid--reverse">
+      <div class="reserve-card">
+        <form id="reserveForm" class="reserve-form" novalidate>
+          <div class="form-row">
+            <label for="nombre">Nombre y apellidos</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Tu nombre">
+          </div>
+          <div class="form-row">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required autocomplete="tel" placeholder="600 000 000">
+          </div>
+          <div class="form-row form-row--split">
+            <div>
+              <label for="fecha">Fecha</label>
+              <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div>
+              <label for="hora">Hora</label>
+              <input type="time" id="hora" name="hora" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="personas">Número de personas</label>
+            <select id="personas" name="personas" required>
+              <option value="">Selecciona</option>
+              <option>1 persona</option>
+              <option>2 personas</option>
+              <option>3 personas</option>
+              <option>4 personas</option>
+              <option>5 personas</option>
+              <option>6 personas</option>
+              <option>7 o más personas</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="comentarios">Comentarios (opcional)</label>
+            <textarea id="comentarios" name="comentarios" rows="3" placeholder="Alergias, celebraciones, terraza..."></textarea>
+          </div>
+
+          <p class="form-msg" id="formMsg" role="status"></p>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn--primary btn--block">
+              Solicitar reserva por WhatsApp
+            </button>
+            <a href="tel:+34986164639" class="btn btn--ghost btn--block">
+              O llámanos: 986 16 46 39
+            </a>
+          </div>
+          <p class="form-disclaimer">
+            Al enviar, se abrirá WhatsApp con los datos de tu reserva para que los
+            confirmemos contigo directamente. La reserva no queda confirmada hasta
+            que te respondamos.
+          </p>
+        </form>
+      </div>
+
+      <div class="section__text">
+        <p class="eyebrow">Reservas</p>
+        <h2>Guarda tu mesa con vistas al mar</h2>
+        <p>
+          Completa el formulario y te confirmaremos la disponibilidad por WhatsApp
+          o teléfono en el momento. Para grupos numerosos o eventos especiales,
+          llámanos directamente y lo organizamos juntos.
+        </p>
+        <ul class="check-list">
+          <li>Confirmación rápida por WhatsApp o llamada</li>
+          <li>Ideal para cenas de verano junto a la playa</li>
+          <li>Grupos, celebraciones y comidas de empresa</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="ubicacion">
+    <div class="container section__grid">
+      <div class="section__text">
+        <p class="eyebrow">Ubicación</p>
+        <h2>A un paso de la Playa de Silgar</h2>
+        <p>
+          Nos encontramos en Rúa Fuensanta Rodríguez, 1, en pleno Sanxenxo, muy
+          cerca de la Playa de Silgar. Fácil de encontrar paseando por el frente
+          marítimo, con el ambiente típico de las noches de verano en las Rías Baixas.
+        </p>
+        <div class="address-card">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 11.5 7.3 11.7.2.2.5.3.7.3s.5-.1.7-.3C13 21.5 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 11c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/></svg>
+          <div>
+            <strong>Rúa Fuensanta Rodríguez, 1</strong>
+            <span>36960 Sanxenxo, Pontevedra</span>
+          </div>
+        </div>
+        <a class="btn btn--primary" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/dir/?api=1&destination=Ru%C3%BAa+Fuensanta+Rodr%C3%ADguez+1+36960+Sanxenxo+Pontevedra">
+          Cómo llegar
+        </a>
+      </div>
+
+      <div class="map-frame">
+        <iframe
+          title="Mapa Pizzería Roma, Sanxenxo"
+          src="https://www.google.com/maps?q=Ru%C3%BAa+Fuensanta+Rodr%C3%ADguez+1,+36960+Sanxenxo,+Pontevedra&output=embed"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-band" id="contacto">
+    <div class="container cta-band__inner">
+      <div>
+        <p class="eyebrow eyebrow--light">Contacto</p>
+        <h2>¿Hablamos?</h2>
+        <p>Llámanos, escríbenos o pásate por Pizzería Roma. Estamos deseando recibirte.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a href="tel:+34986164639" class="btn btn--light">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+          986 16 46 39
+        </a>
+        <a href="https://wa.me/34986164639" target="_blank" rel="noopener" class="btn btn--outline-light">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="brand brand--footer">
+      <span class="brand__badge">PR</span>
+      <span class="brand__text">
+        <strong>Pizzería Roma</strong>
+        <small>Sanxenxo · Playa de Silgar</small>
+      </span>
+    </div>
+    <ul class="footer-info">
+      <li>Rúa Fuensanta Rodríguez, 1, 36960 Sanxenxo, Pontevedra</li>
+      <li><a href="tel:+34986164639">986 16 46 39</a></li>
+    </ul>
+    <p class="footer-copy">&copy; <span id="year"></span> Pizzería Roma. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
