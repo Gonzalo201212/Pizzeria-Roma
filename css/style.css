@@ -1,18 +1,18 @@
 :root {
-  /* Palette — Rías Baixas trattoria: ink night, sun-worn stone, muted oxide,
-     azulejo blue, mustard ochre. Deliberately not terracotta+cream+gold. */
-  --ink: #1c1e26;
-  --ink-70: rgba(28, 30, 38, 0.72);
-  --ink-50: rgba(28, 30, 38, 0.52);
-  --ink-15: rgba(28, 30, 38, 0.13);
-  --paper: #efe7d4;
-  --paper-dim: #e6dcc4;
-  --paper-soft: #f6f1e5;
-  --oxide: #a1402b;
-  --oxide-dark: #7f2f1e;
-  --majolica: #234a56;
-  --majolica-dark: #17343d;
-  --ochre: #bd852e;
+  /* Palette — trattoria di famiglia: bottle-green night, warm linen,
+     Sangiovese wine red, basil olive, saffron gold. */
+  --ink: #1a231e;
+  --ink-70: rgba(26, 35, 30, 0.72);
+  --ink-50: rgba(26, 35, 30, 0.52);
+  --ink-15: rgba(26, 35, 30, 0.13);
+  --paper: #f1ece0;
+  --paper-dim: #e7dfc9;
+  --paper-soft: #f8f4ea;
+  --oxide: #7d2233;
+  --oxide-dark: #5c1826;
+  --majolica: #45542f;
+  --majolica-dark: #2f3b20;
+  --ochre: #c2872e;
   --olive: #5c6b3f;
 
   --font-display: 'Fraunces', Georgia, serif;
@@ -31,7 +31,7 @@
 
   --radius: 4px;
   --radius-lg: 6px;
-  --shadow: 0 24px 48px -28px rgba(28, 20, 14, 0.4);
+  --shadow: 0 24px 48px -28px rgba(26, 35, 30, 0.4);
   --container: 1180px;
 }
 
@@ -267,9 +267,9 @@ button { font-family: inherit; }
   overflow: hidden;
   padding: 128px 0 var(--space-8);
   background:
-    radial-gradient(circle at 12% 15%, rgba(189, 133, 46, 0.16), transparent 45%),
-    radial-gradient(circle at 88% 5%, rgba(35, 74, 86, 0.4), transparent 55%),
-    linear-gradient(165deg, #14161d 0%, #1c1e26 55%, #212a30 100%);
+    radial-gradient(circle at 12% 15%, rgba(194, 135, 46, 0.18), transparent 45%),
+    radial-gradient(circle at 88% 5%, rgba(69, 84, 47, 0.45), transparent 55%),
+    linear-gradient(165deg, #12160f 0%, #1a231e 55%, #212b24 100%);
   color: var(--paper-soft);
   border-bottom: 1px solid var(--oxide);
 }
@@ -407,7 +407,23 @@ button { font-family: inherit; }
 }
 
 /* About */
-.about__art svg { width: 100%; max-width: 320px; margin: 0 auto; display: block; filter: drop-shadow(0 24px 32px rgba(28,20,14,0.28)); }
+.about__inner { max-width: 680px; margin: 0 auto; text-align: center; }
+.about__inner h2 { margin-bottom: var(--space-5); }
+.about__lead { font-size: 1.08rem; max-width: none; margin: 0 auto var(--space-6); }
+.about__facts {
+  list-style: none;
+  margin: 0;
+  padding: var(--space-6) 0 0;
+  border-top: 1px solid var(--ink-15);
+  display: flex;
+  justify-content: center;
+  gap: var(--space-7);
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-70);
+}
+.about__facts li { max-width: 22ch; }
 
 /* Hours */
 .hours-note {
@@ -725,7 +741,7 @@ textarea { resize: vertical; }
 .lightbox__backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(20, 18, 14, 0.88);
+  background: rgba(18, 22, 18, 0.88);
 }
 .lightbox__dialog {
   position: relative;
@@ -782,7 +798,7 @@ textarea { resize: vertical; }
   font-family: var(--font-mono);
   font-size: 0.82rem;
   font-weight: 500;
-  box-shadow: 0 16px 30px -14px rgba(28,20,14,0.5);
+  box-shadow: 0 16px 30px -14px rgba(26,35,30,0.5);
   z-index: 120;
   transition: transform 0.15s ease;
 }
@@ -797,7 +813,7 @@ textarea { resize: vertical; }
   background: var(--paper-soft);
   color: var(--ink);
   border: 1px solid var(--ink-15);
-  box-shadow: 0 10px 20px -12px rgba(28,20,14,0.4);
+  box-shadow: 0 10px 20px -12px rgba(26,35,30,0.4);
   display: flex;
   align-items: center;
   justify-content: center;
