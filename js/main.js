@@ -26,9 +26,11 @@
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Reservation form -> WhatsApp
+  // Reservation form -> on-page summary to read over the phone
   var form = document.getElementById('reserveForm');
   var formMsg = document.getElementById('formMsg');
+  var reserveSummary = document.getElementById('reserveSummary');
+  var reserveSummaryList = document.getElementById('reserveSummaryList');
 
   function setMsg(text, type) {
     formMsg.textContent = text;
@@ -54,6 +56,7 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       setMsg('', null);
+      reserveSummary.classList.remove('is-visible');
 
       var data = new FormData(form);
       var nombre = (data.get('nombre') || '').toString().trim();
@@ -74,22 +77,49 @@
         return;
       }
 
-      var lineas = [
-        'Hola Pizzería Roma, quiero reservar mesa:',
-        'Nombre: ' + nombre,
-        'Teléfono: ' + telefono,
-        'Fecha: ' + formatFecha(fecha),
-        'Hora: ' + hora,
-        'Personas: ' + personas
+      var rows = [
+        ['Nombre', nombre],
+        ['Teléfono', telefono],
+        ['Fecha', formatFecha(fecha)],
+        ['Hora', hora],
+        ['Personas', personas]
       ];
-      if (comentarios) lineas.push('Comentarios: ' + comentarios);
+      if (comentarios) rows.push(['Comentarios', comentarios]);
 
-      var mensaje = encodeURIComponent(lineas.join('\n'));
-      var url = 'https://wa.me/' + RESTAURANT_PHONE_INTL + '?text=' + mensaje;
+      reserveSummaryList.innerHTML = rows.map(function (row) {
+        return '<dt>' + row[0] + '</dt><dd>' + row[1].replace(/</g, '&lt;') + '</dd>';
+      }).join('');
 
-      setMsg('Abriendo WhatsApp con tu solicitud de reserva…', 'is-ok');
-      window.open(url, '_blank', 'noopener');
-      form.reset();
+      setMsg('Listo. Ten esto a mano y llámanos para confirmar.', 'is-ok');
+      reserveSummary.classList.add('is-visible');
+      reserveSummary.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  }
+
+  // Save contact as vCard
+  var saveContactBtn = document.getElementById('saveContactBtn');
+  if (saveContactBtn) {
+    saveContactBtn.addEventListener('click', function () {
+      var vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'N:;Pizzería Roma;;;',
+        'FN:Pizzería Roma',
+        'TEL;TYPE=WORK,VOICE:+' + RESTAURANT_PHONE_INTL,
+        'ADR;TYPE=WORK:;;Rúa Fuensanta Rodríguez, 1;Sanxenxo;Pontevedra;36960;España',
+        'NOTE:Pizzería frente a la Playa de Silgar',
+        'END:VCARD'
+      ].join('\r\n');
+
+      var blob = new Blob([vcard], { type: 'text/vcard' });
+      var url = URL.createObjectURL(blob);
+      var link = document.createElement('a');
+      link.href = url;
+      link.download = 'pizzeria-roma.vcf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
     });
   }
 
