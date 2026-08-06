@@ -679,7 +679,7 @@ textarea { resize: vertical; }
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .gallery-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--ink-15); }
-.gallery-card svg { width: 100%; aspect-ratio: 1 / 1; display: block; }
+.gallery-card svg, .gallery-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
 .gallery-card__label {
   display: block;
   padding: 10px 2px 12px;
@@ -689,6 +689,26 @@ textarea { resize: vertical; }
   text-align: left;
   border-top: 1px dotted var(--ink-15);
   margin-top: 8px;
+}
+
+.gallery-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-8) var(--space-6);
+  border: 1px dashed var(--ink-15);
+  border-radius: var(--radius-lg);
+  color: var(--ink-50);
+}
+.gallery-empty svg { color: var(--ink-50); }
+.gallery-empty p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-50);
 }
 
 /* Lightbox */
